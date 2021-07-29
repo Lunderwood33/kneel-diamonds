@@ -4,18 +4,12 @@ const metals = getMetals()
 
 document.addEventListener(
     "change",
-    (clickEvent) => {
-        const itemClicked = clickEvent.target
-        if (itemClicked.id.startsWith("metal")) {
-            const [, metalId] = itemClicked.id.split("--")
-            
-            for (const metal of metals) {
-             if(metal.id === parseInt(metalId)) {
-
-             }   
-            }
+    (event) => {
+        if (event.target.name === "metal") {
+            window.alert(`User chose metal ${event.target.value}`)
+        }
     }
-}
+
 )
 
 export const Metals = () => {
