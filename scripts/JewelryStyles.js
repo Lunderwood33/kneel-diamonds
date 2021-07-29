@@ -5,6 +5,9 @@ const styles = getStyles()
 document.addEventListener(
     "change",
     (event) => {
+        if (event.target.name === "style") {
+            window.alert(`User chose style ${event.target.value}`)
+        }
     }
 )
 
@@ -20,7 +23,7 @@ export const JewelryStyles = () => {
 
 
     // Join all of the strings in the array into a single string
-    html += listItems.join("")
+    html += listItemsArray.join("")
 
     html += "</ul>"
     return html
